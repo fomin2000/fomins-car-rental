@@ -1,0 +1,42 @@
+.card {
+    margin: 50px 50px;
+}
+
+#navCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.loginForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginBtn {
+    margin-left: 35%;
+    
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#carCards {
+    padding-bottom: 100px;
+}
+
+main {
+    background-image: url('../images/silver-mini-coupe-road.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 130vh;
+    
+}
