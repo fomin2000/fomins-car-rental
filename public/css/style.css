@@ -33,10 +33,83 @@ footer {
     padding-bottom: 100px;
 }
 
-main {
+body {
     background-image: url('../images/silver-mini-coupe-road.jpg');
     background-size: 100%;
     background-attachment: fixed;
-    height: 130vh;
     
+    
+}
+
+#headH1 {
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    color: white;
+    text-decoration: underline;
+}
+
+
+#homepageForms {
+    display: flex;
+    flex-direction: row;
+    margin-top: 75px;
+    height: 400px;
+}    
+
+#rentalsForm {
+    width: 60%;
+    margin: 10px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+#formTitle {
+    text-decoration: underline;
+}
+
+#detailsForm {
+    margin: 10px;
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 15px;
+    height: 70%;
+}
+
+#selectDate {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-success {
+    background-color: rgb(85, 169, 61);
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactForm {
+    padding: 15px;
+    background-color: #ffffff;
+    width: 60%;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+#contactList ul {
+    list-style: none;
+}
+
+.col-form-label {
+    color: aqua;
 }

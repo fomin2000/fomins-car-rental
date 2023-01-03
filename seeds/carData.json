@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "year": 1976,
+        "name": "Cadillac El Dorado",
+        "description": "Slow, yet beautiful and rich classic weekend car",
+        "price": 150,
+        "type": "Classic"
+    },
+    {
+        "id": 2,
+        "year": 1955,
+        "name": "Chevy Bel Air",
+        "description": "The classic old Chevy, smooth like a baby's 🍑",
+        "price": 150,
+        "type": "Classic"
+    },
+    {
+        "id": 3,
+        "year": 1990,
+        "name": "BMW M3",
+        "description": "Ooof, ready to feel that power in a classic? Perfect fit for you.",
+        "price": 180,
+        "type": "Classic"
+    },
+    {
+        "id": 4,
+        "year": 2020,
+        "name": "Mercedes AMG GT R",
+        "description": "Sporty, Fast, and Yellow",
+        "price": 250,
+        "type": "Sport"
+    },
+    {
+        "id": 5,
+        "year": 2019,
+        "name": "CHevy Corvette ZR1",
+        "description": "Sporty looks, sporty sounds, sporty rides",
+        "price": 225,
+        "type": "Sport"
+    },
+    {
+        "id": 6,
+        "year": 2018,
+        "name": "Lamborghini Aventador",
+        "description": "Your best pick for a race!",
+        "price": 300,
+        "type": "Sport"
+    },
+    {
+        "id": 7,
+        "year": 2016,
+        "name": "Rolls-Royce Wraith",
+        "description": "Feeling Rich?",
+        "price": 500,
+        "type": "Luxury"
+    },
+    {
+        "id": 8,
+        "year": 2020,
+        "name": "Mercedes-Benz G-Class",
+        "description": "Luxury version of a Jeep Wrangler",
+        "price": 350,
+        "type": "Luxury"
+    },
+    {
+        "id": 9,
+        "year": 2022,        
+        "name": "BMW X6 M",
+        "description": "Luxury weekend ride, with a kick of boost!",
+        "price": 450,
+        "type": "Luxury"
+    }
+    
+]

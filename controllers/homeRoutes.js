@@ -17,5 +17,8 @@ router.get('/login', (req, res) => {
     res.render('login')
 })
 
+router.get('/contact', (req, res) => {
+    res.render('contact')
+})
 
 module.exports = router
