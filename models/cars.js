@@ -8,6 +8,7 @@ Car.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            primaryKey: true
         },
         year: {
             type: DataTypes.INTEGER,
@@ -22,11 +23,15 @@ Car.init(
             allowNull: false
         },
         price: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         type: {
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        is_rented: {
+            type: DataTypes.BOOLEAN,
             allowNull: false
         }
     },

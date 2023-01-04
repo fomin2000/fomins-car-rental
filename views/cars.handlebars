@@ -1,7 +1,7 @@
 <div class="d-flex flex-wrap justify-content-around" id="carCards">
-    {{!-- {{#each cars as |car| }} --}}
-    <div class="card" style="width: 18rem;">
-        <img src="/public/images/{{ car.id }}.jpg" class="card-img-top" alt="{{ car.name }}">
+    {{#each cars as |car| }}
+    <div id="cardsArr" class="card" style="width: 18rem;">
+        <img src="/images/{{ car.id }}.jpg" class="card-img-top" alt="{{ car.name }}">
         <div class="card-body">
             <h5 class="card-title">{{ car.name }}</h5>
             <p class="card-text">{{ car.description }}</p>
@@ -9,8 +9,9 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Year: {{ car.year }}</li>
             <li class="list-group-item">Vehicle Type: {{ car.type }}</li>
-            <li class="list-group-item"><strong>Price per day: {{ dollar_emoji car.price }}</strong></li>
+            <li class="list-group-item"><strong>Price per day: {{ car.price }}</strong></li>
         </ul>
+        <button type="button" class="btn btn-submit" id="bookNow">Book Now!</button>
     </div>
-    {{!-- {{/each}} --}}
+    {{/each}}
 </div>

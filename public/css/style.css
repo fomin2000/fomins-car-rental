@@ -13,14 +13,22 @@
 }
 
 .loginForm {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#loginBtn {
-    margin-left: 35%;
-    
+.loginBtns {
+    width: 120px;
+    margin: 10px;
+    margin-left: 30%;
+}
+
+#registerBtn {
+    background-color: #ffffff;
+    color: darkblue;
 }
 
 footer {
@@ -31,6 +39,13 @@ footer {
 
 #carCards {
     padding-bottom: 100px;
+    margin-left: 115px;
+    margin-right: 115px;
+}
+
+#cardsArr {
+    border-style: none;
+    border-radius: 15px;
 }
 
 body {
@@ -112,4 +127,12 @@ body {
 
 .col-form-label {
     color: aqua;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+.btn-submit {
+    background-color: aqua;
 }

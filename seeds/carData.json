@@ -5,7 +5,8 @@
         "name": "Cadillac El Dorado",
         "description": "Slow, yet beautiful and rich classic weekend car",
         "price": 150,
-        "type": "Classic"
+        "type": "Classic",
+        "is_rented": false
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "name": "Chevy Bel Air",
         "description": "The classic old Chevy, smooth like a baby's 🍑",
         "price": 150,
-        "type": "Classic"
+        "type": "Classic",
+        "is_rented": false
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "name": "BMW M3",
         "description": "Ooof, ready to feel that power in a classic? Perfect fit for you.",
         "price": 180,
-        "type": "Classic"
+        "type": "Classic",
+        "is_rented": false
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "name": "Mercedes AMG GT R",
         "description": "Sporty, Fast, and Yellow",
         "price": 250,
-        "type": "Sport"
+        "type": "Sport",
+        "is_rented": false
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "name": "CHevy Corvette ZR1",
         "description": "Sporty looks, sporty sounds, sporty rides",
         "price": 225,
-        "type": "Sport"
+        "type": "Sport",
+        "is_rented": false
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "name": "Lamborghini Aventador",
         "description": "Your best pick for a race!",
         "price": 300,
-        "type": "Sport"
+        "type": "Sport",
+        "is_rented": false
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "name": "Rolls-Royce Wraith",
         "description": "Feeling Rich?",
         "price": 500,
-        "type": "Luxury"
+        "type": "Luxury",
+        "is_rented": false
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "name": "Mercedes-Benz G-Class",
         "description": "Luxury version of a Jeep Wrangler",
         "price": 350,
-        "type": "Luxury"
+        "type": "Luxury",
+        "is_rented": false
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "name": "BMW X6 M",
         "description": "Luxury weekend ride, with a kick of boost!",
         "price": 450,
-        "type": "Luxury"
+        "type": "Luxury",
+        "is_rented": false
     }
     
 ]
