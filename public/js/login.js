@@ -1,9 +1,5 @@
 const loginBtn = document.getElementById('loginBtn')
-const registerBtn = document.getElementById('registerBtn')
-
-
-const email = document.getElementById('inputEmail3').value.trim();
-const password = document.getElementById('inputPassword3').value.trim();
+const newUserBtn = document.getElementById('newUserBtn')
 
 
 
@@ -11,12 +7,7 @@ const password = document.getElementById('inputPassword3').value.trim();
 
 
 
-
-
-
-
-
-
+// Redirect to registration
 const directToRegister = (event) => {
     event.preventDefault()
      
@@ -24,4 +15,8 @@ const directToRegister = (event) => {
 
 }
 
-registerBtn.addEventListener('click', directToRegister)
+
+
+
+
+newUserBtn.addEventListener('click', directToRegister)
