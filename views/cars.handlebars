@@ -11,7 +11,8 @@
             <li class="list-group-item">Vehicle Type: {{ car.type }}</li>
             <li class="list-group-item"><strong>Price per day: {{ car.price }}</strong></li>
         </ul>
-        <button type="button" class="btn btn-submit" id="bookNow">Book Now!</button>
+        <button type="button" class="btn btn-submit bookNow" id={{car.id}}>Book Now!</button>
     </div>
     {{/each}}
 </div>
+    <script src="/js/bookCar.js"><script>

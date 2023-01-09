@@ -48,12 +48,11 @@ footer {
     border-radius: 15px;
 }
 
+
 body {
     background-image: url('../images/silver-mini-coupe-road.jpg');
     background-size: 100%;
-    background-attachment: fixed;
-    
-    
+    background-attachment: fixed;    
 }
 
 #headH1 {
@@ -131,6 +130,7 @@ body {
 
 .card-img-top {
     height: 200px;
+
 }
 
 .btn-submit {

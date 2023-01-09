@@ -7,10 +7,10 @@ const userData = require("./userData.json")
 const seedCarDB = async () => {
     await sequelize.sync({ force: true });
 
-    const users = await User.bulkCreate(userData, {
-      individualHooks: true,
-      returning: true,
-    })
+    // const users = await User.bulkCreate(userData, {
+    //   individualHooks: true,
+    //   returning: true,
+    // })
 
     for (const car of carData) {
         await Cars.create({

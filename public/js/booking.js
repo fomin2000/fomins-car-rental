@@ -1,6 +1,7 @@
 const checkBtn = document.getElementById('checkAvailBtn')
 
 
+
 function renderPage(event) {
     event.preventDefault()
 
@@ -18,9 +19,9 @@ function renderPage(event) {
     // const pickupDate = document.getElementById('pickupDate').value.trim()
     // const dropoffDate = document.getElementById('dropoffDate').value.trim()
 
-    
-
-
 }
 
 checkBtn.addEventListener('click', renderPage)
+
+
+
