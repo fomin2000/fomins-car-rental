@@ -1,4 +1,5 @@
 const { Cars } = require('../models');
+const authenticate = require('../utils/authenticate');
 
 
 const router = require('express').Router();
@@ -8,12 +9,14 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => {
 
-    res.render('homepage')
+    res.render('homepage', {
+        logged_in: req.session.logged_in
+    })
 })
 
 
 
-router.get('/cars', async (req, res) => {
+router.get('/cars', authenticate, async (req, res) => {
     try {
         const carData = await Cars.findAll()
 
@@ -30,7 +33,7 @@ router.get('/cars', async (req, res) => {
 
 })
 
-router.get('/cars/:type', async (req, res) => {
+router.get('/cars/:type', authenticate, async (req, res) => {
     try{
         const carTypes = await Cars.findAll({ where: { type: req.params.type}})
         
@@ -45,6 +48,11 @@ router.get('/cars/:type', async (req, res) => {
 })
 
 router.get('/login', (req, res) => {
+    console.log(req.session.destination)
+    if (req.session.logged_in) {
+        res.redirect('/')
+    }
+
     res.render('login')
 
 })
