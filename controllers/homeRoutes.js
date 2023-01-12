@@ -23,7 +23,8 @@ router.get('/cars', authenticate, async (req, res) => {
         const cars = carData.map((car) => car.get({ plain: true}))
 
         res.render('cars', {
-            cars
+            cars,
+            logged_in: req.session.logged_in
         })
 
     } catch (err) {
@@ -39,39 +40,55 @@ router.get('/cars/:type', authenticate, async (req, res) => {
         const cars = carTypes.map((car) => car.get({ plain: true}))
 
         res.render('cars', {
-            cars
+            cars,
+            logged_in: req.session.logged_in
         })
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-// router.get('/cars/:id')
-router.put('/cars/:id', authenticate, async (req, res) => {
-    console.log("Car ID: ", req.params.id);
+// // router.get('/cars/:id')
+// router.put('/cars/:id', authenticate, async (req, res) => {
+//     console.log("Car ID: ", req.params.id);
 
-    // make a request to our DB for the Car with ID of xxx
-    try {
-       // const updatedData = await Cars.findByIdAndUpdate(req.params.id, { is_rented: true });
-        const carData = await Cars.findByPk(req.params.id);
-        const currentCar = carData.get({ plain: true });
-       // console.log(updatedData);
-        console.log(currentCar);
+//     // make a request to our DB for the Car with ID of xxx
+//     try {
+//        // const updatedData = await Cars.findByIdAndUpdate(req.params.id, { is_rented: true });
+//         const carData = await Cars.findByPk(req.params.id);
+//         const currentCar = carData.get({ plain: true });
+//        // console.log(updatedData);
+//         console.log(currentCar);
         
-        // update the is_rented field 
-        currentCar.is_rented = true;
-        console.log("*******");
-        console.log(currentCar);
-        // then save the record to the DB
-        await currentCar.save()  // .catch(error => console.log(error));
+//         // update the is_rented field 
+//         currentCar.is_rented = true;
+//         console.log("*******");
+//         console.log(currentCar);
+//         // then save the record to the DB
+//         await currentCar.save()  // .catch(error => console.log(error));
 
-        res.status(200).json(currentCar);
-    } catch (error) {
-        console.log(error);
+//         res.status(200).json(currentCar);
+//     } catch (error) {
+//         console.log(error);
+//     }
+
+// })
+
+
+router.get('/profile', async (req, res) => {
+    try{
+        const carTypes = await Cars.findAll({ where: { user_id: req.session.user_id}})
+        
+        const cars = carTypes.map((car) => car.get({ plain: true}))
+
+        res.render('profile', {
+            cars,
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        res.status(500).json(err);
     }
-
 })
-
 
 
 router.get('/login', (req, res) => {

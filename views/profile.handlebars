@@ -1,3 +1,6 @@
+<div class="container-fluid" id="profileH2cont">
+    <h2 id="profileH2">Your upcomoing rentals...</h2>
+</div>
 <div class="d-flex flex-wrap justify-content-around" id="carCards">
     {{#each cars as |car| }}
     <div id="cardsArr" class="card" style="width: 18rem;">
@@ -11,7 +14,7 @@
             <li class="list-group-item">Vehicle Type: {{ car.type }}</li>
             <li class="list-group-item"><strong>Price per day: {{ car.price }}</strong></li>
         </ul>
-        <button type="button" class="btn btn-submit bookNow" id={{car.id}}>Book Now!</button>
+        <button type="button" class="btn btn-outline-danger removeRental" id={{car.id}}>Remove Rental</button>
     </div>
     {{/each}}
 </div>

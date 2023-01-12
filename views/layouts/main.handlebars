@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/jass.css">
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     </head>
     <body>
         <header>
@@ -20,6 +21,9 @@
                                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             {{#if logged_in}}
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="logoutBtn" href="/">Logout</a>
                             </li>
