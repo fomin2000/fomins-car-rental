@@ -1,41 +1,61 @@
 const bookBtn = document.querySelector(".bookNow");
 const carContainer = document.getElementById("carCards");
+const removeBtn = document.querySelector('.removeRental')
 
+const bookRental = async (event) => {
+    event.preventDefault()
 
-function bookRental(event) {
-    console.log("Make Reservations ....")
-    // What has to happen?
-    //console.log(event.target);
-    //console.log(event.target.getAttribute('id'))
-    //console.log(this);
+    let id = event.target.getAttribute('id')
     
-    //let user = req.session.id;
-    let car_id = event.target.getAttribute('id');
-    console.log(car_id)
-    // capture any data we need 
-    // user_id   --> to make User association
-    // which car was selected { id, name, description, year, type, price }
-    
-
-    // send a request to UPDate 
-    // 1.) Update the Availability in our Stock (car_id) --> filter through the DB and remove that item
-    // 2.) Update the Users reservation
-    fetch(`/cars/${car_id}`, {
-        method: 'PUT',
-        body: JSON.stringify(car_id)
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-
-            // IF one needs to be updated first 
+    if (id) {
+        const response = await fetch(`/api/cars`, {
+            method: 'PUT',
+            body: JSON.stringify({ id }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
-        .catch(err => {
-            console.log(err);
-        });
-    
-    // Redirect to Users Reservations (or whereever)
+        
+        if (response.ok) {
+            document.location.replace('/profile');
+        } else {
+            alert('Failed to book a car!');
+        }
+    }
 }
 
+
+const removeRental = async (event) => {
+    event.preventDefault()
+
+    let id = event.target.getAttribute('id')
+    
+
+    if (id) {
+        const response = await fetch(`/api/cars/remove`, {
+            method: 'PUT',
+            body: JSON.stringify({ id }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        
+        if (response.ok) {
+            document.location.replace('/profile');
+        } else {
+            alert('Failed to remove your rental!');
+        }
+    }
+}
+
+if (bookBtn) {
 bookBtn.addEventListener('click', bookRental)
+}
+
+if (carContainer) {
 carContainer.addEventListener('click', bookRental);
+}
+
+if (removeBtn) {
+removeBtn.addEventListener('click', removeRental)
+}

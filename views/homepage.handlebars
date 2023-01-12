@@ -42,4 +42,41 @@
         </div>
     </div>
 </div>
+<div class="container-fluid" id="cont2">
+    <h3 id="headH2">The Rise of Luxury Motor Rentals</h3>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <p class="graphP"><strong><u>X Values:</u></strong>  Renters per month</p>
+    <p class="graphP"><strong><u>Y Values:</u></strong>  Years of Business</p>
+    <ul id="graphPointers">
+        <li>🟩 Luxury Motor Rentals</li>
+        <li>🟦 Turo</li>
+        <li>🟥 Enterprise</li>
+    </ul>
+</div>
+<script>
+    var xValues = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{ 
+                data: [860, 1140, 1060, 1100, 1150, 1250, 1330, 2210, 4830, 2478],
+                borderColor: "red",
+                fill: false
+            }, { 
+                data: [1600, 1700, 1700, 1900, 3000, 4000, 4500, 5000, 6000, 8000],
+                borderColor: "green",
+                fill: false
+            }, { 
+                data: [300, 700, 2000, 5000, 5500, 4000, 2000, 1000, 200, 100],
+                borderColor: "blue",
+                fill: false
+            }]
+        },
+        options: {
+            legend: {display: false}
+        }
+    });
+</script>
 <script src="./js/booking.js"></script>
