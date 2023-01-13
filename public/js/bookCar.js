@@ -41,7 +41,7 @@ const removeRental = async (event) => {
         })
         
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/');
         } else {
             alert('Failed to remove your rental!');
         }
